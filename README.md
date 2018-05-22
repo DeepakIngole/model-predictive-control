@@ -29,6 +29,11 @@ Self-Driving Car Engineer Nanodegree Program
 * [Eigen](http://eigen.tuxfamily.org/index.php?title=Main_Page). This is already part of the repo so you shouldn't have to worry about it.
 * Simulator. You can download these from the [releases tab](https://github.com/udacity/self-driving-car-sim/releases).
 * Not a dependency but read the [DATA.md](./DATA.md) for a description of the data sent back from the simulator.
+* If you fail to install Ipopt on MacOs, try the following 
+
+```
+brew install dartsim/dart/ipopt
+```
 
 
 ## Basic Build Instructions
