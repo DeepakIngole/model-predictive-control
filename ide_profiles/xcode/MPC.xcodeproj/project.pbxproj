@@ -7,238 +7,197 @@
 	objects = {
 
 /* Begin PBXAggregateTarget section */
-		83638ABB3D2746A490C4E9B1 /* ZERO_CHECK */ = {
+		87781D889C4044A8B7EC61C4 /* ALL_BUILD */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = 18886E9F82344FD8ACDE69A3 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+			buildConfigurationList = B855A21FAB934CF48207DE88 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
 			buildPhases = (
-				90320EC1F43949D2BD7B2348 /* CMake Rules */,
+				FEFC75C6413D4167B9B6442B /* CMake Rules */,
+			);
+			dependencies = (
+				CAD01C6AFD7641D4B7B15F0C /* PBXTargetDependency */,
+				FEA30198DE01446E86FC413F /* PBXTargetDependency */,
+			);
+			name = ALL_BUILD;
+			productName = ALL_BUILD;
+		};
+		93B586AC835B432FA736A486 /* ZERO_CHECK */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = F8AF458C27B04B20BEED5548 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+			buildPhases = (
+				2F01AEE4552E4BA6B89464DA /* CMake Rules */,
 			);
 			dependencies = (
 			);
 			name = ZERO_CHECK;
 			productName = ZERO_CHECK;
 		};
-		BBF16E135A8E444796AB9466 /* ALL_BUILD */ = {
-			isa = PBXAggregateTarget;
-			buildConfigurationList = AE7E87714531424BBB60105D /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
-			buildPhases = (
-				A472D13EBB9A445D96684C3F /* CMake Rules */,
-			);
-			dependencies = (
-				574BAD598AB94C9AB7933CAC /* PBXTargetDependency */,
-				9AB32C1F2B3046159B6261A2 /* PBXTargetDependency */,
-			);
-			name = ALL_BUILD;
-			productName = ALL_BUILD;
-		};
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		1D430B2C3C954DA4B92E3A3C /* /Users/virt/Developer/Self-Driving cars/batururimi/Term2/Model-Predictive-Control/src/MPC.cpp */ = {isa = PBXBuildFile; fileRef = 420E914AC16142E0B887BC24 /* /Users/virt/Developer/Self-Driving cars/batururimi/Term2/Model-Predictive-Control/src/MPC.cpp */; };
-		4EAF73DE0FED4E0DA793A449 /* /Users/virt/Developer/Self-Driving cars/batururimi/Term2/Model-Predictive-Control/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = F9050786AC7C46C3817F1741 /* /Users/virt/Developer/Self-Driving cars/batururimi/Term2/Model-Predictive-Control/CMakeLists.txt */; };
-		509ED26FCE0F43B589A23672 /* /Users/virt/Developer/Self-Driving cars/batururimi/Term2/Model-Predictive-Control/src/main.cpp */ = {isa = PBXBuildFile; fileRef = 6E34285FBDD34D47863EE8A9 /* /Users/virt/Developer/Self-Driving cars/batururimi/Term2/Model-Predictive-Control/src/main.cpp */; };
+		78CA89EFA2D94C6AB4D6A5E8 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D6E78281A11740E5BA6E240A /* main.cpp */; };
+		BB18BBBDA8F14E639A518EBC /* MPC.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C6126CD999CA417C85BA965D /* MPC.cpp */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXBuildStyle section */
-		31DD9200BF544206898178FC /* RelWithDebInfo */ = {
-			isa = PBXBuildStyle;
-			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-			};
-			name = RelWithDebInfo;
-		};
-		8885CEE95EBC46FE8D307CA4 /* Release */ = {
-			isa = PBXBuildStyle;
-			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-			};
-			name = Release;
-		};
-		B8A4EDB653534EAFBAEF3586 /* MinSizeRel */ = {
-			isa = PBXBuildStyle;
-			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-			};
-			name = MinSizeRel;
-		};
-		EF8FA4ED64D748A39D311367 /* Debug */ = {
-			isa = PBXBuildStyle;
-			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-			};
-			name = Debug;
-		};
-/* End PBXBuildStyle section */
-
 /* Begin PBXContainerItemProxy section */
-		00FF4A2C613844F0AAE2B125 /* PBXContainerItemProxy */ = {
+		211C2DBE9A94445FAA5736A5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = DA045A0929AF48CAB1211820 /* Project object */;
+			containerPortal = 129946F8995944E0B779B280 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 60C8A07EA89542AE82E715F2;
+			remoteGlobalIDString = 32C36F8C535B4BA6B4D0EE4F;
 			remoteInfo = mpc;
 		};
-		16E48C6EC93C4480B8898DC4 /* PBXContainerItemProxy */ = {
+		636EBBDBF554443CB62D4348 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = DA045A0929AF48CAB1211820 /* Project object */;
+			containerPortal = 129946F8995944E0B779B280 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 83638ABB3D2746A490C4E9B1;
+			remoteGlobalIDString = 93B586AC835B432FA736A486;
 			remoteInfo = ZERO_CHECK;
 		};
-		8E4F58CB8A3C48FE8D7A4EE2 /* PBXContainerItemProxy */ = {
+		D44A3A4766B7444780DF5952 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = DA045A0929AF48CAB1211820 /* Project object */;
+			containerPortal = 129946F8995944E0B779B280 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 83638ABB3D2746A490C4E9B1;
+			remoteGlobalIDString = 93B586AC835B432FA736A486;
 			remoteInfo = ZERO_CHECK;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		058452989E8F4ED983D13F6B /* /Users/virt/Developer/Self-Driving cars/batururimi/Term2/Model-Predictive-Control/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
-		3B404D080B09431394ADC681 /* mpc */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = mpc; sourceTree = BUILT_PRODUCTS_DIR; };
-		420E914AC16142E0B887BC24 /* /Users/virt/Developer/Self-Driving cars/batururimi/Term2/Model-Predictive-Control/src/MPC.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = MPC.cpp; path = src/MPC.cpp; sourceTree = SOURCE_ROOT; };
-		5BFC390718784ABDA613FF64 /* /Users/virt/Developer/Self-Driving cars/batururimi/Term2/Model-Predictive-Control/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
-		6E34285FBDD34D47863EE8A9 /* /Users/virt/Developer/Self-Driving cars/batururimi/Term2/Model-Predictive-Control/src/main.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = main.cpp; path = src/main.cpp; sourceTree = SOURCE_ROOT; };
-		F9050786AC7C46C3817F1741 /* /Users/virt/Developer/Self-Driving cars/batururimi/Term2/Model-Predictive-Control/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		7E692726339943548C70247A /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		C6126CD999CA417C85BA965D /* MPC.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = MPC.cpp; path = src/MPC.cpp; sourceTree = SOURCE_ROOT; };
+		D14F774FF2BB477A9BC324A4 /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		D28BB0105DC2470884094ADD /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		D6E78281A11740E5BA6E240A /* main.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = main.cpp; path = src/main.cpp; sourceTree = SOURCE_ROOT; };
+		D98F1AFF20B44A1D009CFD7E /* MPC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MPC.h; path = src/MPC.h; sourceTree = "<group>"; };
+		F9D7F721A0AE4B779CAB3ECB /* mpc */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = mpc; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
-		0BE3780D5A604DFCA33CB162 /* ALL_BUILD */ = {
+		030B8B4371C04CCD8ED6A6A5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C1E993ACD1DC460A96101000 /* CMake Rules */,
-				5BFC390718784ABDA613FF64 /* /Users/virt/Developer/Self-Driving cars/batururimi/Term2/Model-Predictive-Control/CMakeLists.txt */,
-			);
-			name = ALL_BUILD;
-			sourceTree = "<group>";
-		};
-		1407079D35E14771A9654E12 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				3B404D080B09431394ADC681 /* mpc */,
+				F9D7F721A0AE4B779CAB3ECB /* mpc */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		19343241BF8B48D1935350AA /* CMake Rules */ = {
+		0760238B108D47698490E5F1 = {
 			isa = PBXGroup;
 			children = (
-			);
-			name = "CMake Rules";
-			sourceTree = "<group>";
-		};
-		8B59B39C8BCA48EDB8AD2A14 = {
-			isa = PBXGroup;
-			children = (
-				9D187BF237D14A478800E7F9 /* mpc */,
-				0BE3780D5A604DFCA33CB162 /* ALL_BUILD */,
-				CBF3764EA63442769B3B0609 /* ZERO_CHECK */,
-				1407079D35E14771A9654E12 /* Products */,
+				2A4907EE5988428585A1B23A /* mpc */,
+				10F050AC35164E9799C033F4 /* ALL_BUILD */,
+				90860A2C236E4D209D294C83 /* ZERO_CHECK */,
+				030B8B4371C04CCD8ED6A6A5 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		9D187BF237D14A478800E7F9 /* mpc */ = {
+		10F050AC35164E9799C033F4 /* ALL_BUILD */ = {
 			isa = PBXGroup;
 			children = (
-				A658AFADF15940358C665FD7 /* Source Files */,
-				F9050786AC7C46C3817F1741 /* /Users/virt/Developer/Self-Driving cars/batururimi/Term2/Model-Predictive-Control/CMakeLists.txt */,
+				F133726CBA6842E6BF5B4E84 /* CMake Rules */,
+				7E692726339943548C70247A /* CMakeLists.txt */,
+			);
+			name = ALL_BUILD;
+			sourceTree = "<group>";
+		};
+		2A4907EE5988428585A1B23A /* mpc */ = {
+			isa = PBXGroup;
+			children = (
+				D98F1AFE20B44A10009CFD7E /* Header Files */,
+				86EFB3A363C245919EA1466F /* Source Files */,
+				D28BB0105DC2470884094ADD /* CMakeLists.txt */,
 			);
 			name = mpc;
 			sourceTree = "<group>";
 		};
-		A658AFADF15940358C665FD7 /* Source Files */ = {
-			isa = PBXGroup;
-			children = (
-				420E914AC16142E0B887BC24 /* /Users/virt/Developer/Self-Driving cars/batururimi/Term2/Model-Predictive-Control/src/MPC.cpp */,
-				6E34285FBDD34D47863EE8A9 /* /Users/virt/Developer/Self-Driving cars/batururimi/Term2/Model-Predictive-Control/src/main.cpp */,
-			);
-			name = "Source Files";
-			sourceTree = "<group>";
-		};
-		C1E993ACD1DC460A96101000 /* CMake Rules */ = {
+		2BF0E0B46F1D4362A153574C /* CMake Rules */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			name = "CMake Rules";
 			sourceTree = "<group>";
 		};
-		CBF3764EA63442769B3B0609 /* ZERO_CHECK */ = {
+		86EFB3A363C245919EA1466F /* Source Files */ = {
 			isa = PBXGroup;
 			children = (
-				19343241BF8B48D1935350AA /* CMake Rules */,
-				058452989E8F4ED983D13F6B /* /Users/virt/Developer/Self-Driving cars/batururimi/Term2/Model-Predictive-Control/CMakeLists.txt */,
+				C6126CD999CA417C85BA965D /* MPC.cpp */,
+				D6E78281A11740E5BA6E240A /* main.cpp */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		90860A2C236E4D209D294C83 /* ZERO_CHECK */ = {
+			isa = PBXGroup;
+			children = (
+				2BF0E0B46F1D4362A153574C /* CMake Rules */,
+				D14F774FF2BB477A9BC324A4 /* CMakeLists.txt */,
 			);
 			name = ZERO_CHECK;
+			sourceTree = "<group>";
+		};
+		D98F1AFE20B44A10009CFD7E /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				D98F1AFF20B44A1D009CFD7E /* MPC.h */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+		F133726CBA6842E6BF5B4E84 /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		60C8A07EA89542AE82E715F2 /* mpc */ = {
+		32C36F8C535B4BA6B4D0EE4F /* mpc */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D5C5DDD9790944628F57807D /* Build configuration list for PBXNativeTarget "mpc" */;
+			buildConfigurationList = 3E89FD7CFB1A40FC98031256 /* Build configuration list for PBXNativeTarget "mpc" */;
 			buildPhases = (
-				49094EE0F3BB488B91720143 /* Sources */,
+				07D42398917542D4B84AD6AE /* Sources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				0F061ED3C20F487CBB36BA80 /* PBXTargetDependency */,
+				D38FEF2D098F4D49A3B86B07 /* PBXTargetDependency */,
 			);
 			name = mpc;
 			productName = mpc;
-			productReference = 3B404D080B09431394ADC681 /* mpc */;
+			productReference = F9D7F721A0AE4B779CAB3ECB /* mpc */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		DA045A0929AF48CAB1211820 /* Project object */ = {
+		129946F8995944E0B779B280 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
 				LastUpgradeCheck = 0930;
 			};
-			buildConfigurationList = 5BAC7F3750FB41A09AEF7483 /* Build configuration list for PBXProject "MPC" */;
-			buildSettings = {
-			};
-			buildStyles = (
-				EF8FA4ED64D748A39D311367 /* Debug */,
-				8885CEE95EBC46FE8D307CA4 /* Release */,
-				B8A4EDB653534EAFBAEF3586 /* MinSizeRel */,
-				31DD9200BF544206898178FC /* RelWithDebInfo */,
-			);
+			buildConfigurationList = 4B962EADE45E498EBD8AB9AA /* Build configuration list for PBXProject "MPC" */;
 			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
-			mainGroup = 8B59B39C8BCA48EDB8AD2A14;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 0760238B108D47698490E5F1;
 			projectDirPath = ../../;
 			projectRoot = "";
 			targets = (
-				BBF16E135A8E444796AB9466 /* ALL_BUILD */,
-				83638ABB3D2746A490C4E9B1 /* ZERO_CHECK */,
-				60C8A07EA89542AE82E715F2 /* mpc */,
+				87781D889C4044A8B7EC61C4 /* ALL_BUILD */,
+				93B586AC835B432FA736A486 /* ZERO_CHECK */,
+				32C36F8C535B4BA6B4D0EE4F /* mpc */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		638314EE8AF54B508FB643A8 = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# shell script goes here
-exit 0";
-			showEnvVarsInLog = 0;
-		};
-		90320EC1F43949D2BD7B2348 /* CMake Rules */ = {
+		2F01AEE4552E4BA6B89464DA /* CMake Rules */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -249,7 +208,7 @@ exit 0";
 			shellScript = "make -C /Users/virt/Developer/Self-Driving\\ cars/batururimi/Term2/Model-Predictive-Control/ide_profiles/xcode -f /Users/virt/Developer/Self-Driving\\ cars/batururimi/Term2/Model-Predictive-Control/ide_profiles/xcode/CMakeScripts/ZERO_CHECK_cmakeRulesBuildPhase.make$CONFIGURATION all";
 			showEnvVarsInLog = 0;
 		};
-		A472D13EBB9A445D96684C3F /* CMake Rules */ = {
+		FEFC75C6413D4167B9B6442B /* CMake Rules */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -260,64 +219,53 @@ exit 0";
 			shellScript = "make -C /Users/virt/Developer/Self-Driving\\ cars/batururimi/Term2/Model-Predictive-Control/ide_profiles/xcode -f /Users/virt/Developer/Self-Driving\\ cars/batururimi/Term2/Model-Predictive-Control/ide_profiles/xcode/CMakeScripts/ALL_BUILD_cmakeRulesBuildPhase.make$CONFIGURATION all";
 			showEnvVarsInLog = 0;
 		};
-		F82A3FD52879475B80D3FB21 = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# shell script goes here
-exit 0";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		49094EE0F3BB488B91720143 /* Sources */ = {
+		07D42398917542D4B84AD6AE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1D430B2C3C954DA4B92E3A3C /* /Users/virt/Developer/Self-Driving cars/batururimi/Term2/Model-Predictive-Control/src/MPC.cpp */,
-				509ED26FCE0F43B589A23672 /* /Users/virt/Developer/Self-Driving cars/batururimi/Term2/Model-Predictive-Control/src/main.cpp */,
+				BB18BBBDA8F14E639A518EBC /* MPC.cpp in Sources */,
+				78CA89EFA2D94C6AB4D6A5E8 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		0F061ED3C20F487CBB36BA80 /* PBXTargetDependency */ = {
+		CAD01C6AFD7641D4B7B15F0C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 83638ABB3D2746A490C4E9B1 /* ZERO_CHECK */;
-			targetProxy = 8E4F58CB8A3C48FE8D7A4EE2 /* PBXContainerItemProxy */;
+			target = 93B586AC835B432FA736A486 /* ZERO_CHECK */;
+			targetProxy = D44A3A4766B7444780DF5952 /* PBXContainerItemProxy */;
 		};
-		574BAD598AB94C9AB7933CAC /* PBXTargetDependency */ = {
+		D38FEF2D098F4D49A3B86B07 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 60C8A07EA89542AE82E715F2 /* mpc */;
-			targetProxy = 00FF4A2C613844F0AAE2B125 /* PBXContainerItemProxy */;
+			target = 93B586AC835B432FA736A486 /* ZERO_CHECK */;
+			targetProxy = 636EBBDBF554443CB62D4348 /* PBXContainerItemProxy */;
 		};
-		9AB32C1F2B3046159B6261A2 /* PBXTargetDependency */ = {
+		FEA30198DE01446E86FC413F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 83638ABB3D2746A490C4E9B1 /* ZERO_CHECK */;
-			targetProxy = 16E48C6EC93C4480B8898DC4 /* PBXContainerItemProxy */;
+			target = 32C36F8C535B4BA6B4D0EE4F /* mpc */;
+			targetProxy = 211C2DBE9A94445FAA5736A5 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		10AF1EF8D05A42DEA57CA8C6 /* Debug */ = {
+		41D95D23E3F8418BB82B7CC2 /* RelWithDebInfo */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = (/usr/local/include,"\"/Users/virt/Developer/Self-Driving cars/batururimi/Term2/Model-Predictive-Control/src/Eigen-3.3\"",/usr/local/opt/openssl/include);
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include,
+					"\"/Users/virt/Developer/Self-Driving cars/batururimi/Term2/Model-Predictive-Control/src/Eigen-3.3\"",
+					/usr/local/opt/openssl/include,
+				);
 				INSTALL_PATH = "";
 				OTHER_LDFLAGS = " ";
 				OTHER_REZFLAGS = "";
@@ -325,139 +273,55 @@ exit 0";
 				SECTORDER_FLAGS = "";
 				SYMROOT = "/Users/virt/Developer/Self-Driving cars/batururimi/Term2/Model-Predictive-Control/ide_profiles/xcode";
 				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
 			};
-			name = Debug;
+			name = RelWithDebInfo;
 		};
-		16DEBFCC62E540BC9ECEB883 /* MinSizeRel */ = {
+		4C4EA8A4420A416490EADC0A /* MinSizeRel */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = (/usr/local/include,"\"/Users/virt/Developer/Self-Driving cars/batururimi/Term2/Model-Predictive-Control/src/Eigen-3.3\"",/usr/local/opt/openssl/include);
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ZERO_CHECK;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/virt/Developer/Self-Driving cars/batururimi/Term2/Model-Predictive-Control/ide_profiles/xcode";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk;
+				SYMROOT = "/Users/virt/Developer/Self-Driving cars/batururimi/Term2/Model-Predictive-Control/ide_profiles/xcode/build";
 			};
 			name = MinSizeRel;
 		};
-		52F2CF44C5AF415DB23AA9CE /* RelWithDebInfo */ = {
+		5EB3638144124D859FB26DA9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
-				EXECUTABLE_PREFIX = "";
-				EXECUTABLE_SUFFIX = "";
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 2;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = (/usr/local/include,"\"/Users/virt/Developer/Self-Driving cars/batururimi/Term2/Model-Predictive-Control/src/Eigen-3.3\"",/usr/local/opt/openssl/include);
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include,
+					"\"/Users/virt/Developer/Self-Driving cars/batururimi/Term2/Model-Predictive-Control/src/Eigen-3.3\"",
+					/usr/local/opt/openssl/include,
+				);
 				INSTALL_PATH = "";
-				LD_RUNPATH_SEARCH_PATHS = "/usr/local/lib /usr/local/opt/openssl/lib /usr/local/Cellar/libuv/1*/lib";
-				LIBRARY_SEARCH_PATHS = " /usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME) /usr/local/lib /usr/local/opt/openssl/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME) /usr/local/opt/openssl/lib /usr/local/Cellar/libuv/1*/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME) /usr/local/Cellar/libuv/1*/lib";
-				OTHER_CPLUSPLUSFLAGS = "-Wall        -DNDEBUG   -std=c++11 -O3";
-				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -lipopt -lz -lssl -luv -luWS";
+				OTHER_LDFLAGS = " ";
 				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = mpc;
+				PRODUCT_NAME = ALL_BUILD;
 				SECTORDER_FLAGS = "";
 				SYMROOT = "/Users/virt/Developer/Self-Driving cars/batururimi/Term2/Model-Predictive-Control/ide_profiles/xcode";
 				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
-			};
-			name = RelWithDebInfo;
-		};
-		718C855E5CBF4B84BF56C10B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk;
-				SYMROOT = "/Users/virt/Developer/Self-Driving cars/batururimi/Term2/Model-Predictive-Control/ide_profiles/xcode/build";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
 			};
 			name = Debug;
 		};
-		8715E63E71C946ED8248D0FD /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk;
-				SYMROOT = "/Users/virt/Developer/Self-Driving cars/batururimi/Term2/Model-Predictive-Control/ide_profiles/xcode/build";
-			};
-			name = Release;
-		};
-		8F6DF37DA1CB44109AE6F435 /* RelWithDebInfo */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = (/usr/local/include,"\"/Users/virt/Developer/Self-Driving cars/batururimi/Term2/Model-Predictive-Control/src/Eigen-3.3\"",/usr/local/opt/openssl/include);
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ALL_BUILD;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/virt/Developer/Self-Driving cars/batururimi/Term2/Model-Predictive-Control/ide_profiles/xcode";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
-			};
-			name = RelWithDebInfo;
-		};
-		96384C04F3324DC3A8D19130 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = (/usr/local/include,"\"/Users/virt/Developer/Self-Driving cars/batururimi/Term2/Model-Predictive-Control/src/Eigen-3.3\"",/usr/local/opt/openssl/include);
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ALL_BUILD;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/virt/Developer/Self-Driving cars/batururimi/Term2/Model-Predictive-Control/ide_profiles/xcode";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
-			};
-			name = Release;
-		};
-		AEF08C5641FA44E8BD795A50 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = (/usr/local/include,"\"/Users/virt/Developer/Self-Driving cars/batururimi/Term2/Model-Predictive-Control/src/Eigen-3.3\"",/usr/local/opt/openssl/include);
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ALL_BUILD;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/virt/Developer/Self-Driving cars/batururimi/Term2/Model-Predictive-Control/ide_profiles/xcode";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
-			};
-			name = Debug;
-		};
-		C95124ECB5A2402CBA1DED69 /* Release */ = {
+		73B02A6F19544C5CB96E1016 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -466,24 +330,122 @@ exit 0";
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = 3;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = (/usr/local/include,"\"/Users/virt/Developer/Self-Driving cars/batururimi/Term2/Model-Predictive-Control/src/Eigen-3.3\"",/usr/local/opt/openssl/include);
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include,
+					"\"/Users/virt/Developer/Self-Driving cars/batururimi/Term2/Model-Predictive-Control/src/Eigen-3.3\"",
+					/usr/local/opt/openssl/include,
+				);
 				INSTALL_PATH = "";
 				LD_RUNPATH_SEARCH_PATHS = "/usr/local/lib /usr/local/opt/openssl/lib /usr/local/Cellar/libuv/1*/lib";
-				LIBRARY_SEARCH_PATHS = " /usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME) /usr/local/lib /usr/local/opt/openssl/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME) /usr/local/opt/openssl/lib /usr/local/Cellar/libuv/1*/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME) /usr/local/Cellar/libuv/1*/lib";
-				OTHER_CPLUSPLUSFLAGS = "-Wall     -DNDEBUG   -std=c++11 -O3";
-				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -lipopt -lz -lssl -luv -luWS";
+				LIBRARY_SEARCH_PATHS = (
+					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/usr/local/lib,
+					"/usr/local/opt/openssl/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/usr/local/opt/openssl/lib,
+					"/usr/local/Cellar/libuv/1*/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					"/usr/local/Cellar/libuv/1*/lib",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-Wall",
+					"-DNDEBUG",
+					"-std=c++11",
+					"-O3",
+				);
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"-lipopt",
+					"-lz",
+					"-lssl",
+					"-luv",
+					"-luWS",
+				);
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = mpc;
 				SECTORDER_FLAGS = "";
 				SYMROOT = "/Users/virt/Developer/Self-Driving cars/batururimi/Term2/Model-Predictive-Control/ide_profiles/xcode";
 				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
 			};
 			name = Release;
 		};
-		CC79FB55BF8B451EB5E7A10A /* Debug */ = {
+		8AADA796DE3A41F4B9633A5E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk;
+				SYMROOT = "/Users/virt/Developer/Self-Driving cars/batururimi/Term2/Model-Predictive-Control/ide_profiles/xcode/build";
+			};
+			name = Release;
+		};
+		8E98A79F3443426E96C97E19 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include,
+					"\"/Users/virt/Developer/Self-Driving cars/batururimi/Term2/Model-Predictive-Control/src/Eigen-3.3\"",
+					/usr/local/opt/openssl/include,
+				);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/virt/Developer/Self-Driving cars/batururimi/Term2/Model-Predictive-Control/ide_profiles/xcode";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = MinSizeRel;
+		};
+		941943D4776A492887A823B4 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include,
+					"\"/Users/virt/Developer/Self-Driving cars/batururimi/Term2/Model-Predictive-Control/src/Eigen-3.3\"",
+					/usr/local/opt/openssl/include,
+				);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/virt/Developer/Self-Driving cars/batururimi/Term2/Model-Predictive-Control/ide_profiles/xcode";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = RelWithDebInfo;
+		};
+		B01A65BF4F6643DDAA5F6229 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -492,33 +454,65 @@ exit 0";
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = (/usr/local/include,"\"/Users/virt/Developer/Self-Driving cars/batururimi/Term2/Model-Predictive-Control/src/Eigen-3.3\"",/usr/local/opt/openssl/include);
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include,
+					"\"/Users/virt/Developer/Self-Driving cars/batururimi/Term2/Model-Predictive-Control/src/Eigen-3.3\"",
+					/usr/local/opt/openssl/include,
+				);
 				INSTALL_PATH = "";
 				LD_RUNPATH_SEARCH_PATHS = "/usr/local/lib /usr/local/opt/openssl/lib /usr/local/Cellar/libuv/1*/lib";
-				LIBRARY_SEARCH_PATHS = " /usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME) /usr/local/lib /usr/local/opt/openssl/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME) /usr/local/opt/openssl/lib /usr/local/Cellar/libuv/1*/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME) /usr/local/Cellar/libuv/1*/lib";
-				OTHER_CPLUSPLUSFLAGS = "-Wall      -std=c++11 -O3";
-				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -lipopt -lz -lssl -luv -luWS";
+				LIBRARY_SEARCH_PATHS = (
+					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/usr/local/lib,
+					"/usr/local/opt/openssl/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/usr/local/opt/openssl/lib,
+					"/usr/local/Cellar/libuv/1*/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					"/usr/local/Cellar/libuv/1*/lib",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-Wall",
+					"-std=c++11",
+					"-O3",
+				);
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"-lipopt",
+					"-lz",
+					"-lssl",
+					"-luv",
+					"-luWS",
+				);
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = mpc;
 				SECTORDER_FLAGS = "";
 				SYMROOT = "/Users/virt/Developer/Self-Driving cars/batururimi/Term2/Model-Predictive-Control/ide_profiles/xcode";
 				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
 			};
 			name = Debug;
 		};
-		CD914FE3703146AB9595E935 /* RelWithDebInfo */ = {
+		B982E07A1C9646FDAAE12C25 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = (/usr/local/include,"\"/Users/virt/Developer/Self-Driving cars/batururimi/Term2/Model-Predictive-Control/src/Eigen-3.3\"",/usr/local/opt/openssl/include);
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include,
+					"\"/Users/virt/Developer/Self-Driving cars/batururimi/Term2/Model-Predictive-Control/src/Eigen-3.3\"",
+					/usr/local/opt/openssl/include,
+				);
 				INSTALL_PATH = "";
 				OTHER_LDFLAGS = " ";
 				OTHER_REZFLAGS = "";
@@ -526,41 +520,16 @@ exit 0";
 				SECTORDER_FLAGS = "";
 				SYMROOT = "/Users/virt/Developer/Self-Driving cars/batururimi/Term2/Model-Predictive-Control/ide_profiles/xcode";
 				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
-			};
-			name = RelWithDebInfo;
-		};
-		DA51C01A8A65413990206772 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = (/usr/local/include,"\"/Users/virt/Developer/Self-Driving cars/batururimi/Term2/Model-Predictive-Control/src/Eigen-3.3\"",/usr/local/opt/openssl/include);
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ZERO_CHECK;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/virt/Developer/Self-Driving cars/batururimi/Term2/Model-Predictive-Control/ide_profiles/xcode";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
 			};
 			name = Release;
 		};
-		E797D3B714964D8EB518BDFB /* MinSizeRel */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk;
-				SYMROOT = "/Users/virt/Developer/Self-Driving cars/batururimi/Term2/Model-Predictive-Control/ide_profiles/xcode/build";
-			};
-			name = MinSizeRel;
-		};
-		EA87537599CC47CB81E3D319 /* RelWithDebInfo */ = {
+		C1D4B3CFEAAF47999575944F /* RelWithDebInfo */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ONLY_ACTIVE_ARCH = YES;
@@ -569,7 +538,161 @@ exit 0";
 			};
 			name = RelWithDebInfo;
 		};
-		EC5E79E7DC364F468C35FA5B /* MinSizeRel */ = {
+		C96BF7441D5040B09761E297 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include,
+					"\"/Users/virt/Developer/Self-Driving cars/batururimi/Term2/Model-Predictive-Control/src/Eigen-3.3\"",
+					/usr/local/opt/openssl/include,
+				);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/virt/Developer/Self-Driving cars/batururimi/Term2/Model-Predictive-Control/ide_profiles/xcode";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = MinSizeRel;
+		};
+		CC0135F32B5C476D9CF5237E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include,
+					"\"/Users/virt/Developer/Self-Driving cars/batururimi/Term2/Model-Predictive-Control/src/Eigen-3.3\"",
+					/usr/local/opt/openssl/include,
+				);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/virt/Developer/Self-Driving cars/batururimi/Term2/Model-Predictive-Control/ide_profiles/xcode";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Release;
+		};
+		CDE50DA21B404E70AF7B6F94 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk;
+				SYMROOT = "/Users/virt/Developer/Self-Driving cars/batururimi/Term2/Model-Predictive-Control/ide_profiles/xcode/build";
+			};
+			name = Debug;
+		};
+		DCBC3CC6E55448A88A9F726B /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include,
+					"\"/Users/virt/Developer/Self-Driving cars/batururimi/Term2/Model-Predictive-Control/src/Eigen-3.3\"",
+					/usr/local/opt/openssl/include,
+				);
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = "/usr/local/lib /usr/local/opt/openssl/lib /usr/local/Cellar/libuv/1*/lib";
+				LIBRARY_SEARCH_PATHS = (
+					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/usr/local/lib,
+					"/usr/local/opt/openssl/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/usr/local/opt/openssl/lib,
+					"/usr/local/Cellar/libuv/1*/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					"/usr/local/Cellar/libuv/1*/lib",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-Wall",
+					"-DNDEBUG",
+					"-std=c++11",
+					"-O3",
+				);
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"-lipopt",
+					"-lz",
+					"-lssl",
+					"-luv",
+					"-luWS",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = mpc;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/virt/Developer/Self-Driving cars/batururimi/Term2/Model-Predictive-Control/ide_profiles/xcode";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = RelWithDebInfo;
+		};
+		F418B575836C43C1B73E15E5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include,
+					"\"/Users/virt/Developer/Self-Driving cars/batururimi/Term2/Model-Predictive-Control/src/Eigen-3.3\"",
+					/usr/local/opt/openssl/include,
+				);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/virt/Developer/Self-Driving cars/batururimi/Term2/Model-Predictive-Control/ide_profiles/xcode";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Debug;
+		};
+		FC0E1AB4EEA44BAE8A51635B /* MinSizeRel */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -578,92 +701,100 @@ exit 0";
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = s;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = (/usr/local/include,"\"/Users/virt/Developer/Self-Driving cars/batururimi/Term2/Model-Predictive-Control/src/Eigen-3.3\"",/usr/local/opt/openssl/include);
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include,
+					"\"/Users/virt/Developer/Self-Driving cars/batururimi/Term2/Model-Predictive-Control/src/Eigen-3.3\"",
+					/usr/local/opt/openssl/include,
+				);
 				INSTALL_PATH = "";
 				LD_RUNPATH_SEARCH_PATHS = "/usr/local/lib /usr/local/opt/openssl/lib /usr/local/Cellar/libuv/1*/lib";
-				LIBRARY_SEARCH_PATHS = " /usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME) /usr/local/lib /usr/local/opt/openssl/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME) /usr/local/opt/openssl/lib /usr/local/Cellar/libuv/1*/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME) /usr/local/Cellar/libuv/1*/lib";
-				OTHER_CPLUSPLUSFLAGS = "-Wall     -DNDEBUG   -std=c++11 -O3";
-				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -lipopt -lz -lssl -luv -luWS";
+				LIBRARY_SEARCH_PATHS = (
+					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/usr/local/lib,
+					"/usr/local/opt/openssl/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/usr/local/opt/openssl/lib,
+					"/usr/local/Cellar/libuv/1*/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					"/usr/local/Cellar/libuv/1*/lib",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-Wall",
+					"-DNDEBUG",
+					"-std=c++11",
+					"-O3",
+				);
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"-lipopt",
+					"-lz",
+					"-lssl",
+					"-luv",
+					"-luWS",
+				);
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = mpc;
 				SECTORDER_FLAGS = "";
 				SYMROOT = "/Users/virt/Developer/Self-Driving cars/batururimi/Term2/Model-Predictive-Control/ide_profiles/xcode";
 				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
-			};
-			name = MinSizeRel;
-		};
-		FD4B88F5AD6A460C8E094C5B /* MinSizeRel */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = (/usr/local/include,"\"/Users/virt/Developer/Self-Driving cars/batururimi/Term2/Model-Predictive-Control/src/Eigen-3.3\"",/usr/local/opt/openssl/include);
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ALL_BUILD;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/virt/Developer/Self-Driving cars/batururimi/Term2/Model-Predictive-Control/ide_profiles/xcode";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
 			};
 			name = MinSizeRel;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		18886E9F82344FD8ACDE69A3 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+		3E89FD7CFB1A40FC98031256 /* Build configuration list for PBXNativeTarget "mpc" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				10AF1EF8D05A42DEA57CA8C6 /* Debug */,
-				DA51C01A8A65413990206772 /* Release */,
-				16DEBFCC62E540BC9ECEB883 /* MinSizeRel */,
-				CD914FE3703146AB9595E935 /* RelWithDebInfo */,
+				B01A65BF4F6643DDAA5F6229 /* Debug */,
+				73B02A6F19544C5CB96E1016 /* Release */,
+				FC0E1AB4EEA44BAE8A51635B /* MinSizeRel */,
+				DCBC3CC6E55448A88A9F726B /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		5BAC7F3750FB41A09AEF7483 /* Build configuration list for PBXProject "MPC" */ = {
+		4B962EADE45E498EBD8AB9AA /* Build configuration list for PBXProject "MPC" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				718C855E5CBF4B84BF56C10B /* Debug */,
-				8715E63E71C946ED8248D0FD /* Release */,
-				E797D3B714964D8EB518BDFB /* MinSizeRel */,
-				EA87537599CC47CB81E3D319 /* RelWithDebInfo */,
+				CDE50DA21B404E70AF7B6F94 /* Debug */,
+				8AADA796DE3A41F4B9633A5E /* Release */,
+				4C4EA8A4420A416490EADC0A /* MinSizeRel */,
+				C1D4B3CFEAAF47999575944F /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		AE7E87714531424BBB60105D /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+		B855A21FAB934CF48207DE88 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AEF08C5641FA44E8BD795A50 /* Debug */,
-				96384C04F3324DC3A8D19130 /* Release */,
-				FD4B88F5AD6A460C8E094C5B /* MinSizeRel */,
-				8F6DF37DA1CB44109AE6F435 /* RelWithDebInfo */,
+				5EB3638144124D859FB26DA9 /* Debug */,
+				CC0135F32B5C476D9CF5237E /* Release */,
+				C96BF7441D5040B09761E297 /* MinSizeRel */,
+				941943D4776A492887A823B4 /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		D5C5DDD9790944628F57807D /* Build configuration list for PBXNativeTarget "mpc" */ = {
+		F8AF458C27B04B20BEED5548 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CC79FB55BF8B451EB5E7A10A /* Debug */,
-				C95124ECB5A2402CBA1DED69 /* Release */,
-				EC5E79E7DC364F468C35FA5B /* MinSizeRel */,
-				52F2CF44C5AF415DB23AA9CE /* RelWithDebInfo */,
+				F418B575836C43C1B73E15E5 /* Debug */,
+				B982E07A1C9646FDAAE12C25 /* Release */,
+				8E98A79F3443426E96C97E19 /* MinSizeRel */,
+				41D95D23E3F8418BB82B7CC2 /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = DA045A0929AF48CAB1211820 /* Project object */;
+	rootObject = 129946F8995944E0B779B280 /* Project object */;
 }
