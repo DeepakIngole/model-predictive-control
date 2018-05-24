@@ -124,18 +124,18 @@ int main() {
                     double Lf = 2.67;
                     
                     // Latency for predicting time at actuation
-                    const double dt = 0.1;
+                    const double latency = 0.1;
                     
-                    double pred_px = 0.0 + v * dt; // Since psi is zero, cos(0) = 1, can leave out
+                    double pred_px = 0.0 + v * latency; // Since psi is zero, cos(0) = 1, can leave out
                     const double pred_py = 0.0; // Since sin(0) = 0, y stays as 0 (y + v * 0 * dt)
                     
                     // Note if δ is positive we rotate counter-clockwise,
                     // or turn left. In the simulator however,
                     // a positive value implies a right turn and a negative value implies a left turn. (A)
-                    double pred_psi = 0.0 - v * delta / Lf * dt; // 
-                    double pred_v = v + a * dt;
-                    double pred_cte = cte + v * sin(epsi) * dt;
-                    double pred_epsi = epsi - v * delta / Lf * dt; // same as (A)
+                    double pred_psi = 0.0 - v * delta / Lf * latency; //
+                    double pred_v = v + a * latency;
+                    double pred_cte = cte + v * sin(epsi) * latency;
+                    double pred_epsi = epsi - v * delta / Lf * latency; // same as (A)
                     
                     Eigen::VectorXd state(6);
                     state << pred_px, pred_py, pred_psi, pred_v, pred_cte, pred_epsi;
