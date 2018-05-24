@@ -97,7 +97,7 @@ int main() {
                     // Fits a 3rd-order polynomial to the above x and y coordinates
                     Eigen::VectorXd xvals(ptsx.size());
                     Eigen::VectorXd yvals(ptsy.size());
-                    // transfor to the vehicle orientation
+                    // transform to the vehicle's coordinate system
                     for (int i = 0; i < ptsx.size(); i++) {
                         double x = ptsx[i] - px;
                         double y = ptsy[i] - py;
@@ -120,16 +120,22 @@ int main() {
                     
                     // Predict state after latency
                     // x, y and psi are all zero after transformation above
+                    
                     double Lf = 2.67;
+                    
                     // Latency for predicting time at actuation
                     const double dt = 0.1;
                     
                     double pred_px = 0.0 + v * dt; // Since psi is zero, cos(0) = 1, can leave out
                     const double pred_py = 0.0; // Since sin(0) = 0, y stays as 0 (y + v * 0 * dt)
-                    double pred_psi = 0.0 + v * -delta / Lf * dt;
+                    
+                    // Note if δ is positive we rotate counter-clockwise,
+                    // or turn left. In the simulator however,
+                    // a positive value implies a right turn and a negative value implies a left turn. (A)
+                    double pred_psi = 0.0 - v * delta / Lf * dt; // 
                     double pred_v = v + a * dt;
                     double pred_cte = cte + v * sin(epsi) * dt;
-                    double pred_epsi = epsi + v * -delta / Lf * dt;
+                    double pred_epsi = epsi - v * delta / Lf * dt; // same as (A)
                     
                     Eigen::VectorXd state(6);
                     state << pred_px, pred_py, pred_psi, pred_v, pred_cte, pred_epsi;
@@ -142,7 +148,7 @@ int main() {
                      * Both are in between [-1, 1].
                      *
                      */
-                    double steer_value =  vars[0] / (deg2rad(25) * Lf);
+                    double steer_value =  vars[0] / (deg2rad(25) * Lf); // multiply by Lf to take into account the vehicle's turning ability
                     double throttle_value = vars[1];
                     
                     json msgJson;
@@ -159,8 +165,9 @@ int main() {
                     // the points in the simulator are connected by a Green line
                     for (int i = 2; i < vars.size(); i += 2) {
                         double x = vars[i];
-                        double y = vars[i + 1];
                         mpc_x_vals.push_back(x);
+                        
+                        double y = vars[i + 1];                        
                         mpc_y_vals.push_back(y);
                     }
                     
@@ -173,7 +180,7 @@ int main() {
                     
                     //.. add (x,y) points to list here, points are in reference to the vehicle's coordinate system
                     // the points in the simulator are connected by a Yellow line
-                    double poly_inc = 2.5;
+                    double poly_inc = 2.5; // 2.5 units in front of the car
                     int num_points = 25;
                     
                     for (int i = 1; i < num_points; i++) {
