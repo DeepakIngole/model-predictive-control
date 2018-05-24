@@ -5,9 +5,7 @@
 
 using CppAD::AD;
 
-// TODO: Set the timestep length and duration
-//size_t N = 25;
-//double dt = 0.05;
+// Set the timestep length and duration
 size_t N = 10;
 double dt = 0.1;
 
@@ -57,24 +55,36 @@ public:
         // Any additions to the cost should be added to `fg[0]`.
         fg[0] = 0;
         
+        // Let's add some weights to specify how much we should consider each cost
+        const double weight_cte = 2000;
+        const double weight_epsi = 2000;
+        const double weight_v = 1;
+        
+        
         // the part of the cost based on the reference state
         for(int t = 0; t < N; ++t){
-            fg[0] += CppAD::pow(vars[cte_start + t], 2);
-            fg[0] += CppAD::pow(vars[epsi_start + t], 2);
-            fg[0] += CppAD::pow(vars[v_start + t] - ref_v, 2);
+            fg[0] += weight_cte * CppAD::pow(vars[cte_start + t], 2);
+            fg[0] += weight_epsi * CppAD::pow(vars[epsi_start + t], 2);
+            fg[0] += weight_v * CppAD::pow(vars[v_start + t] - ref_v, 2);
         }
         
         // minimise the use of actuactors (steering "delta" and acceleration "a")
+        const double weight_delta = 10;
+        const double weight_a = 10;
+        
         for(int t = 0; t < N - 1; ++t){
-            fg[0] += CppAD::pow(vars[delta_start + t], 2);
-            fg[0] + CppAD::pow(vars[a_start + t], 2);
+            fg[0] += weight_delta * CppAD::pow(vars[delta_start + t], 2);
+            fg[0] += weight_a * CppAD::pow(vars[a_start + t], 2);
         }
         
         // minimize the value gap between sequential actuations,
         // i.e make the ride smoother
+        const double weight_delta_seq = 100;
+        const double weight_a_seq = 10;
+        
         for (int t = 0; t < N - 2; ++t) {
-            fg[0] += CppAD::pow(vars[delta_start + t + 1] - vars[delta_start + t], 2);
-            fg[0] += CppAD::pow(vars[a_start + t + 1] - vars[a_start + t], 2);
+            fg[0] += weight_delta_seq * CppAD::pow(vars[delta_start + t + 1] - vars[delta_start + t], 2);
+            fg[0] += weight_a_seq * CppAD::pow(vars[a_start + t + 1] - vars[a_start + t], 2);
         }
         
         // Model constraints
