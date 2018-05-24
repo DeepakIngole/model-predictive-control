@@ -12,9 +12,7 @@ must implement the Model Predictive Conrol to drive the car around the track.
 
 [//]: # (Image References)
 
-[image1]: ./output/Artboard.png "Callbacks to simulator"
-[image2]: ./output/bit_mask.png "Callbacks to simulator"
-[image3]: ./output/twiddle_mask.png "Twiddle - mask"
+[image1]: ./output/mpc.png "MPC"
 
 
 ### MPC
@@ -32,6 +30,7 @@ The following steps were taken in order to implement the Model Predictive Contro
 ## MPC Model
 The model combines the state and actuations (steering angle and acceleration) from teh previous time step in order to compute the state for the current time step based on the following equations:
 
+![alt text][image1]
 
  In order to have with smoother steering transitions, some weights values were added while computing the cost. For example:
 
@@ -39,7 +38,7 @@ The model combines the state and actuations (steering angle and acceleration) fr
 fg[0] += weight_delta_seq * CppAD::pow(vars[delta_start + t + 1] - vars[delta_start + t], 2);
  ```
 
- This influence the solver into keeping sequential steering values closer together. Several other weights were used.
+This influence the solver into keeping sequential steering values closer together. Several other weights were used.
 
 ## Latency
 A very important part in the project is the 100 millisecond latency between the actuations commands on top of the connection latency introduced by the simulator.
