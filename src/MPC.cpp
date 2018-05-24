@@ -6,8 +6,10 @@
 using CppAD::AD;
 
 // TODO: Set the timestep length and duration
-size_t N = 25;
-double dt = 0.05;
+//size_t N = 25;
+//double dt = 0.05;
+size_t N = 10;
+double dt = 0.1;
 
 // This value assumes the model presented in the classroom is used.
 //
@@ -23,7 +25,8 @@ const double Lf = 2.67;
 
 // Both the reference cross track and orientation errors are 0.
 // The reference velocity is set to 40 mph.
-double ref_v = 40;
+//double ref_v = 40;
+double ref_v = 120;
 
 size_t x_start = 0;
 size_t y_start = x_start + N;
@@ -61,14 +64,15 @@ public:
             fg[0] += CppAD::pow(vars[v_start + t] - ref_v, 2);
         }
         
-        // minimise the use of actuactors
+        // minimise the use of actuactors (steering "delta" and acceleration "a")
         for(int t = 0; t < N - 1; ++t){
             fg[0] += CppAD::pow(vars[delta_start + t], 2);
             fg[0] + CppAD::pow(vars[a_start + t], 2);
         }
         
-        // minimize the value gap between sequential actuations
-        for (int t = 0; t < N - 1; ++t) {
+        // minimize the value gap between sequential actuations,
+        // i.e make the ride smoother
+        for (int t = 0; t < N - 2; ++t) {
             fg[0] += CppAD::pow(vars[delta_start + t + 1] - vars[delta_start + t], 2);
             fg[0] += CppAD::pow(vars[a_start + t + 1] - vars[a_start + t], 2);
         }
@@ -106,8 +110,10 @@ public:
             AD<double> delta0 = vars[delta_start + t - 1];
             AD<double> a0 = vars[a_start + t - 1];
             
-            AD<double> f0 = coeffs[0] + coeffs[1] * x0;
-            AD<double> psides0 = CppAD::atan(coeffs[1]);
+//            AD<double> f0 = coeffs[0] + coeffs[1] * x0;
+            AD<double> f0 = coeffs[0] + coeffs[1] * x0 + coeffs[2] * CppAD::pow(x0, 2) + coeffs[3] * CppAD::pow(x0, 3);
+//            AD<double> psi_des0 = CppAD::atan(coeffs[1]);
+            AD<double> psi_des0 = CppAD::atan(coeffs[1] + 2 * coeffs[2] * x0 + 3 * coeffs[3] * CppAD::pow(x0,2));
             
             // Here's `x` to get you started.
             // The idea here is to constraint this value to be 0.
@@ -117,17 +123,19 @@ public:
             // y_[t+1] = y[t] + v[t] * sin(psi[t]) * dt
             // we change psi_[t+1] = psi[t] + v[t] / Lf * delta[t] * dt to
             // psi_[t+1] = psi[t] - v[t] / Lf * delta[t] * dt because in the simulator however,
-            // a positive value implies a right turn and a negative value implies a left turn.
+            // a positive value implies a right turn and a negative value implies a left turn. (A)
             //
             // v_[t+1] = v[t] + a[t] * dt
             // cte[t+1] = f(x[t]) - y[t] + v[t] * sin(epsi[t]) * dt
-            // epsi[t+1] = psi[t] - psides[t] + v[t] * delta[t] / Lf * dt
+            // and instead of
+            // epsi[t+1] = psi[t] - psi_desired[t] + v[t] * delta[t] / Lf * dt
+            // we use "-" epsi[t+1] = psi[t] - psi_desired[t] - v[t] * delta[t] / Lf * dt for the same reason as (A)
             fg[1 + x_start + t] = x1 - (x0 + v0 * CppAD::cos(psi0) * dt);
             fg[1 + y_start + t] = y1 - (y0 + v0 * CppAD::sin(psi0) * dt);
             fg[1 + psi_start + t] = psi1 - (psi0 - v0 * delta0 / Lf * dt);
             fg[1 + v_start + t] = v1 - (v0 + a0 * dt);
-            fg[1 + cte_start + t] = cte1 - (f0 - y0 + v0 * CppAD::sin(epsi0) * dt);
-            fg[1 + epsi_start + t] = psi1 - (psi0 - psides0 + v0 * delta0 / Lf * dt);
+            fg[1 + cte_start + t] = cte1 - ((f0 - y0) + (v0 * CppAD::sin(epsi0) * dt));
+            fg[1 + epsi_start + t] = psi1 - ((psi0 - psi_des0) - v0 * delta0 / Lf * dt);
         }
     }
 };
@@ -140,7 +148,7 @@ MPC::~MPC() {}
 
 vector<double> MPC::Solve(Eigen::VectorXd state, Eigen::VectorXd coeffs) {
     bool ok = true;
-    size_t i;
+//    size_t i;
     typedef CPPAD_TESTVECTOR(double) Dvector;
     
     // Set the number of model variables (includes both states and inputs).
@@ -157,24 +165,25 @@ vector<double> MPC::Solve(Eigen::VectorXd state, Eigen::VectorXd coeffs) {
     // SHOULD BE 0 besides initial state.
     Dvector vars(n_vars);
     for (int i = 0; i < n_vars; i++) {
-        vars[i] = 0.;
+        vars[i] = 0.0;
     }
+    
     
     // set the initial variable values
     double x = state[0];
     double y = state[1];
-    double psi = state[3];
-    double v = state[4];
-    double cte = state[5];
-    double epsi = state[6];
+    double psi = state[2];
+    double v = state[3];
+    double cte = state[4];
+    double epsi = state[5];
     
     
-    vars[x_start] = x;
-    vars[y_start] = y;
-    vars[psi_start] = psi_start;
-    vars[v_start] = v;
-    vars[cte_start] = cte;
-    vars[epsi_start] = epsi;
+//    vars[x_start] = x;
+//    vars[y_start] = y;
+//    vars[psi_start] = psi_start;
+//    vars[v_start] = v;
+//    vars[cte_start] = cte;
+//    vars[epsi_start] = epsi;
     
     Dvector vars_lowerbound(n_vars);
     Dvector vars_upperbound(n_vars);
@@ -267,8 +276,11 @@ vector<double> MPC::Solve(Eigen::VectorXd state, Eigen::VectorXd coeffs) {
     //
     // {...} is shorthand for creating a vector, so auto x1 = {1.0,2.0}
     // creates a 2 element double vector.
-    return {solution.x[x_start + 1],   solution.x[y_start + 1],
-        solution.x[psi_start + 1], solution.x[v_start + 1],
-        solution.x[cte_start + 1], solution.x[epsi_start + 1],
-        solution.x[delta_start],   solution.x[a_start]};
+    vector<double> result = {solution.x[delta_start], solution.x[a_start]};
+    for (int i = 0; i < N; ++i) {
+        result.push_back(solution.x[x_start + i]);
+        result.push_back(solution.x[y_start + i]);
+    }
+    
+    return result;
 }
